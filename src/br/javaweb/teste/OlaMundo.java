@@ -1,5 +1,6 @@
 package br.javaweb.teste;
 
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -8,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class OlaMundo extends HttpServlet {
+    private String width;
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -19,6 +21,24 @@ public class OlaMundo extends HttpServlet {
         out.println("<body>");
         out.println("Ola Mundo - requisicao recebida via GET");
         out.println("<br/>Data atual: " + new java.util.Date());
+        out.println("<table border=\"1\" cellspacing=\"2\" cellpadding=\"2\">\n" +
+"                <thead>\n" +
+"                    <tr>\n" +
+"                        <th></th>\n" +
+"                        <th></th>\n" +
+"                    </tr>\n" +
+"                </thead>\n" +
+"                <tbody>\n" +
+"                    <tr>\n" +
+"                        <td></td>\n" +
+"                        <td></td>\n" +
+"                    </tr>\n" +
+"                    <tr>\n" +
+"                        <td></td>\n" +
+"                        <td></td>\n" +
+"                    </tr>\n" +
+"                </tbody>\n" +
+"            </table>");
         out.println("</body>");
         out.println("</html>");
         // Vai imprimir na console tomcat
